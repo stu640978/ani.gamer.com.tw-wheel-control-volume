@@ -4,7 +4,7 @@
 // @name:zh-CN   巴哈姆特动画疯滚轮控制音量大小
 // @namespace    JTRKON
 // @author       JTRKON
-// @version      1.1
+// @version      1.2
 // @description  Control the volume of video elements using mouse wheel
 // @description:zh-TW   巴哈姆特動畫瘋播放器中透過滾輪控制音量大小功能
 // @description:zh-CN   巴哈姆特动画疯播放器中透过滚轮控制音量大小功能
@@ -44,7 +44,8 @@
     if (video) {
       if (
         document.body.classList.contains("fullscreen") ||
-        document.fullscreenElement === video.parentElement
+        document.fullscreenElement === video.parentElement ||
+        document.getElementById("Web_fullscreen_style") !== null
       ) {
         var volume = video.volume;
         if (!video.parentElement.querySelector(".volume-display")) {
